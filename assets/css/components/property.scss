@@ -1,0 +1,37 @@
+.property,
+a.property {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px;
+  color: $color_gray_dark;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: calc(19 / 16);
+  text-decoration: none;
+  border-radius: $radius;
+  transition: $transition;
+  @media (min-width: $mqmd) {
+    min-width: 150px;
+  }
+  .icon {
+    flex-shrink: 0;
+    margin: -2.5px 10px -2.5px 0;
+    color: $color_main;
+  }
+  &:hover,
+  &:focus,
+  &.is-active {
+    color: $color_main;
+    background: rgba(255, 230, 237, 0.5);
+    cursor: pointer;
+  }
+}
+.property--icon {
+  @media (min-width: $mqmd) {
+    min-width: 185px;
+  }
+}
+.property--nowrap {
+  white-space: nowrap;
+}

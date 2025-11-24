@@ -1,0 +1,129 @@
+// formulář - checkbox
+.form-checkbox {
+  position: relative;
+  padding: 5px 0;
+  line-height: calc(27 / 14);
+  user-select: none;
+
+  // input pole
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+
+    // zaškrtnutý
+    &:checked ~ .form-checkbox__box {
+      border-color: $color_main;
+      background: $color_main url('#{$imgPath}/check.svg') center center no-repeat;
+      background-size: 14px;
+    }
+
+    // vypnutý (disabled)
+    &:disabled ~ .form-checkbox__box {
+      border: 1px solid $color_gray_light;
+      background: $color_gray_light;
+      cursor: default;
+    }
+  }
+  a {
+    color: $color_black;
+  }
+
+  // úprava labelu
+  .form-label {
+    position: relative;
+    z-index: $index_page + 1;
+    margin: 0;
+    padding-left: 32px;
+    color: $color_gray_dark;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: calc(27 / 14);
+    cursor: pointer;
+    span {
+      display: block;
+      color: $color_gray;
+      font-size: 13px;
+    }
+  }
+}
+
+// element v řádku
+.form-checkbox--inline {
+  display: inline-block;
+  padding-right: 15px;
+}
+.form-checkbox--inside {
+  padding: 0;
+  .form-checkbox__box {
+    top: 4px;
+  }
+}
+.form-checkbox--light {
+  .form-label {
+    color: $color_gray;
+    font-size: 14px;
+    font-weight: normal;
+  }
+}
+// slepý checkbox
+.form-checkbox__box {
+  position: absolute;
+  top: 9px;
+  z-index: $index_page + 2;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background-color: $color_white;
+  pointer-events: none;
+}
+.form-checkbox__wrap {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: -5px;
+  .form-checkbox {
+    padding: 5px;
+  }
+}
+.form-checkbox__limit {
+  .form-checkbox {
+    width: 50%;
+    @media (min-width: $mqxs) {
+      width: calc(100% / 3);
+    }
+    @media (min-width: $mqmd) {
+      //width: 20%;
+    }
+  }
+  .form-label {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    line-clamp: 2;
+  }
+}
+.form-checkbox__limit-2 {
+  .form-checkbox {
+    width: 50%;
+    @media (min-width: $mqsm) {
+      width: calc(100% / 3);
+    }
+    @media (min-width: $mqmd) {
+      width: 25%;
+    }
+  }
+  .form-label {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    line-clamp: 2;
+  }
+}

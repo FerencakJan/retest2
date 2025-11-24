@@ -1,0 +1,114 @@
+// navigace
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: $index_menu - 1;
+  flex: 1 1 auto;
+  display: flex;
+  overflow: auto;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100vw;
+  height: 100vh;
+  padding: 60px ($layout_gap + 5px);
+  background: #212121;
+  transition: $transition;
+  transform: translate(100%, 0);
+  pointer-events: none;
+  @media (min-width: $mqsm) {
+    padding: 130px ($layout_gap + 5px);
+  }
+  ul {
+    display: block;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 10px;
+    list-style-type: none;
+    @media (min-width: $mqxs) {
+      column-count: 2;
+    }
+  }
+  ul li {
+    position: relative;
+    display: block;
+    padding: 0 0 0 40px;
+    counter-increment: nav-counter;
+    @media (min-width: $mqsm) {
+      margin: 0 0 12px 0;
+      padding: 0 0 0 80px;
+      &:last-child {
+        margin: 0;
+      }
+    }
+    &:before {
+      content: '0' counter(nav-counter);
+      position: absolute;
+      top: 16px;
+      left: 0;
+      color: rgba($color: $color_white, $alpha: 0.5);
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+      font-weight: normal;
+      font-style: normal;
+      @media (min-width: $mqsm) {
+        top: 23px;
+        font-size: 24px;
+      }
+    }
+  }
+  ul li a {
+    position: relative;
+    display: block;
+    padding: 10px;
+    color: $color_white;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: calc(50 / 36);
+    text-decoration: none;
+    transition: $transition;
+    @media (min-width: $mqsm) {
+      font-size: 36px;
+    }
+    &:hover,
+    &:focus {
+      color: $color_main;
+    }
+  }
+  ul li ul {
+    column-count: initial;
+    @media (min-width: $mqsm) {
+      padding: 14px 10px;
+    }
+  }
+  ul li ul li {
+    margin: 0;
+    padding: 0;
+    counter-increment: none;
+    &:before {
+      display: none;
+    }
+  }
+  ul li ul li a {
+    padding: 0;
+    color: rgba($color: $color_white, $alpha: 0.7);
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: calc(50 / 24);
+    @media (min-width: $mqsm) {
+      font-size: 24px;
+    }
+  }
+  &.is-open {
+    display: flex;
+    box-shadow: 0  0 2.5rem 1.25rem rgba(0, 0, 0, 0.18);
+    transform: translate(0, 0);
+    pointer-events: auto;
+  }
+  @media (orientation: landscape) {
+    justify-content: flex-start;
+  }
+}

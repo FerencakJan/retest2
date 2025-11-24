@@ -1,0 +1,55 @@
+
+// základní vzhled input polí
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 8px 16px;
+  color: $color_black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background-color: $color_white;
+  transition: $transition;
+
+  -webkit-appearance: none;
+  &::placeholder {
+    color: rgba($color: #000, $alpha: 0.5);
+    font-weight: normal;
+    opacity: 1;
+  }
+  &:focus {
+    border-color: $color_main;
+    outline: 0;
+  }
+  &.is-success {
+    border-color: $color_success;
+  }
+  &.is-danger {
+    border-color: $color_danger;
+  }
+}
+
+// popisek pole
+label {
+  display: block;
+  color: rgba($color: #000, $alpha: 0.5);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: calc(20 / 13);
+}
+
+// ošetření submit inputu, pokud je použit
+button,
+input[type='submit'] {
+  width: auto;
+  cursor: pointer;
+}
+
+// ošetření chekboxu a radio buttonu
+input[type='checkbox'],
+input[type='radio'] {
+  width: auto;
+}

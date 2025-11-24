@@ -1,0 +1,30 @@
+// patička
+.footer {
+  flex-shrink: 0;
+  margin-top: 40px;
+  padding: 50px 0;
+  border-top: 1px solid $color_gray_light;
+  @media (min-width: $mqsm) {
+    margin-top: 100px;
+    padding: 90px 0 110px;
+  }
+  .recent {
+    padding-top: 0;
+  }
+}
+.footer__wrap {
+  margin-top: 90px;
+  .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 90px;
+  }
+  @media (min-width: $mqsm) {
+    margin-top: 190px;
+  }
+}
+.footer__logo {
+  margin: 16px 30px 16px 0;
+}

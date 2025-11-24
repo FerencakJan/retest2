@@ -1,0 +1,27 @@
+{
+  "extends": "stylelint-config-standard",
+  "plugins": ["stylelint-scss"],
+  "rules": {
+    "color-hex-case": "lower",
+    "declaration-empty-line-before": null,
+    "max-empty-lines": 2,
+    "no-extra-semicolons": true,
+    "media-feature-name-no-vendor-prefix": true,
+    "property-no-vendor-prefix": [true, {
+      "ignoreProperties": ["interpolation-mode", "appearance", "box-orient", "mask-image"]
+    }],
+    "block-no-empty": null,
+    "selector-max-specificity": ["0,4,0", {
+      "ignoreSelectors": ["#js-map"]
+    }],
+    "selector-pseudo-element-colon-notation": null,
+    "function-parentheses-space-inside": "never",
+    "no-descending-specificity": null,
+    "rule-empty-line-before": "never",
+    "declaration-colon-newline-after": "always-multi-line",
+    "property-no-unknown": true,
+    "at-rule-empty-line-before": "never",
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true
+  }
+}

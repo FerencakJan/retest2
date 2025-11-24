@@ -1,0 +1,32 @@
+.typo-page {
+  ul,
+  ol {
+    margin-left: 30px;
+  }
+  ol {
+    margin: 0 0 30px 30px;
+    padding: 0;
+    list-style: none;
+    counter-reset: listItem;
+  }
+  ol li {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 0 0 0 60px;
+    &:before {
+      content: counter(listItem);
+      position: absolute;
+      top: -5px;
+      left: 0;
+      display: block;
+      width: 36px;
+      height: 36px;
+      color: $color_white;
+      line-height: 36px;
+      text-align: center;
+      border-radius: 36px;
+      background-color: $color_main;
+      counter-increment: listItem;
+    }
+  }
+}

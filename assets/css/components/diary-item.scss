@@ -1,0 +1,109 @@
+.diary-item {
+  position: relative;
+  transition: $transition;
+  &:before {
+    content: '';
+    position: absolute;
+    box-shadow: $shadow-1;
+    opacity: 0;
+    transition: $transition;
+
+    inset: -1rem;
+  }
+  h3 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    margin-bottom: 10px;
+    text-overflow: ellipsis;
+  }
+  p {
+    max-width: 353px;
+    margin-bottom: 19px;
+  }
+  a {
+    color: rgba(253, 6, 74, 0.8);
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: $color_main_dark;
+    }
+  }
+  &:hover,
+  &:focus {
+    &::before {
+      opacity: 1;
+    }
+    .estate__action {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  .estate__action {
+    max-width: 100%;
+  }
+}
+.diary-item__perex {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  text-overflow: ellipsis;
+}
+.diary-item__link {
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+
+  inset: 0;
+}
+.diary-item--inline {
+  @media (min-width: $mqsm) {
+    min-height: 192px;
+    padding-left: 350px;
+  }
+  p {
+    @media (min-width: $mqsm) {
+      max-width: 100%;
+      margin-bottom: 12px;
+    }
+  }
+  .diary-item__image {
+    @media (min-width: $mqsm) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 304px;
+      height: 192px;
+      margin: 0;
+      img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+}
+.diary-item__image {
+  position: relative;
+  min-height: 192px;
+  margin-bottom: 24px;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: $radius;
+  }
+}
+.diary-item__date,
+p.diary-item__date {
+  color: $color_gray_dark;
+  opacity: 0.8;
+}

@@ -1,0 +1,34 @@
+.directory {
+  padding: 0 0 16px 0;
+  @media (min-width: $mqsm) {
+    padding: 0 0 32px 0;
+  }
+  .custom-select--filter {
+    border: none;
+  }
+}
+.directory__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px 16px;
+  @media (min-width: $mqlg) {
+    gap: 16px;
+    margin: -16px;
+  }
+  .directory-item {
+    flex: 0 0 auto;
+    width: 100%;
+    @media (min-width: $mqxs) {
+      width: calc(50% - 8px);
+    }
+    @media (min-width: $mqlg) {
+      width: calc(50% - 16px);
+    }
+  }
+  + .pagination {
+    margin-top: 32px;
+    @media (min-width: $mqlg) {
+      margin-top: 96px;
+    }
+  }
+}

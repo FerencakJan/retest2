@@ -1,0 +1,59 @@
+.pin,
+a.pin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: $color_main;
+  border-radius: 100%;
+  background: #fefcfa;
+  box-shadow: 0 0.6px 1.8px rgba(0, 0, 0, 0.11), 0 3.2px 7.2px rgba(0, 0, 0, 0.13);
+  transition: $transition;
+  .estate--simple {
+    position: absolute;
+    bottom: calc(100% + 9px);
+    left: 50%;
+    visibility: hidden;
+    opacity: 0;
+    transition: $transition;
+    transform: translate(-50%, 0) translateZ(0) translate3d(0, 0, 0);
+  }
+  &:hover,
+  &.is-open {
+    z-index: $index_base + 1;
+    display: flex;
+    background: #f2bec6;
+    cursor: pointer;
+  }
+  &.is-open {
+    .estate--simple {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+.pin--example-1 {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+.pin--example-2 {
+  position: absolute;
+  top: 40%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+}
+.pin--example-3 {
+  position: absolute;
+  top: 30%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+.pin--example-4 {
+  position: absolute;
+  top: 70%;
+  left: 58%;
+  transform: translate(-50%, -50%);
+}

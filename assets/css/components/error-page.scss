@@ -1,0 +1,21 @@
+.error-page {
+  padding: 50px 0;
+  text-align: center;
+  @media (min-width: $mqsm) {
+    padding: 100px 0;
+  }
+  @media (min-width: $mqlg) and (min-height: 970px) {
+    padding-top: 170px;
+  }
+  .title--lg {
+    line-height: calc(50 / 36);
+  }
+  p {
+    max-width: 428px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+.error-page__image {
+  margin-bottom: 36px;
+}

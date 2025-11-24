@@ -1,0 +1,173 @@
+// hlavní kontejner
+.container {
+  width: 100%;
+  max-width: $mqlg;
+  margin: 0 auto;
+  padding: 0 $layout_gap + 6px;
+  @media (min-width: $mqlg) {
+    padding: 0 $layout_gap;
+  }
+}
+.container--xlg {
+  max-width: $mqxlg;
+  padding: 0 $layout_gap + 6px;
+}
+.container--content {
+  max-width: 1310px;
+}
+.container--text {
+  max-width: 832px;
+}
+// řádek mřížky
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 (-$layout_gap);
+  // mezera mezi boxy
+  & > .col {
+    padding: $layout_gap;
+  }
+}
+// fix pro max-width tabulku
+.row--block {
+  @media (max-width: $mqsm) {
+    display: block;
+  }
+}
+// řádek se stejně vysokými bloky
+.row--align {
+  & > .col {
+    flex-direction: row;
+  }
+}
+// mezery mezi bloky
+.row--space {
+  justify-content: space-between;
+}
+// centrování
+.row--center {
+  align-items: center;
+}
+// řádek bez mezer
+.row--nogap {
+  margin: 0;
+  & > .col {
+    padding: 0;
+  }
+}
+// úprava pro formulář
+.row--form {
+  &.row {
+    margin: 0 -5px;
+  }
+  &.row > .col {
+    padding: 5px;
+  }
+}
+.row--form-bottom {
+  align-items: center;
+  justify-content: flex-start;
+  &.row {
+    margin: 16px -10px 0 -10px;
+    @media (min-width: $mqmd) {
+      margin: 26px -15px 0 -15px;
+    }
+  }
+  &.row > .col {
+    padding: 5px 10px;
+    @media (min-width: $mqmd) {
+      padding: 5px 15px;
+    }
+  }
+}
+.row--start {
+  justify-content: flex-start;
+}
+.row--end {
+  justify-content: flex-end;
+}
+// blok mřížky
+.col {
+  flex: 1 0 100%;
+  display: flex;
+  flex-direction: column;
+}
+// dva vedle sebe
+.col--2 {
+  @media (min-width: $mqxs) {
+    flex-basis: auto;
+    width: 50%;
+  }
+}
+// tři vedle sebe
+.col--3 {
+  @media (min-width: $mqxs) {
+    flex-basis: auto;
+    width: 50%;
+  }
+  @media (min-width: $mqmd) {
+    width: 33.33333333%;
+  }
+}
+// čtyři vedle sebe
+.col--4 {
+  @media (min-width: $mqxs) {
+    flex-basis: auto;
+    width: 50%;
+  }
+  @media (min-width: $mqmd) {
+    width: 25%;
+  }
+}
+// pět vedle sebe
+.col--5 {
+  @media (min-width: $mqxs) {
+    flex-basis: auto;
+    width: 50%;
+  }
+  @media (min-width: $mqmd) {
+    width: 20%;
+  }
+}
+// šest vedle sebe
+.col--6 {
+  @media (min-width: $mqxs) {
+    flex-basis: auto;
+    width: 50%;
+  }
+  @media (min-width: $mqmd) {
+    width: 16.66666666666667%;
+  }
+}
+// buňka se roztahuje
+.col--grow {
+  flex-grow: 1;
+}
+// zarovnání na pravou stranu
+.col--end {
+  align-items: flex-end;
+}
+// zarovnání na levou stranu
+.col--start {
+  align-items: flex-start;
+}
+// zarovnání na střed
+.col--center {
+  align-items: center;
+}
+// změna osy
+.col--row {
+  flex-direction: row;
+}
+.col--auto {
+  @media (min-width: $mqsm) {
+    flex: 0 0 auto;
+    width: auto;
+  }
+}
+.col--submit {
+  @media (min-width: $mqsm) {
+    order: -1;
+  }
+}

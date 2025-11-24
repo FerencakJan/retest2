@@ -1,0 +1,31 @@
+.join,
+a.join {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 12px;
+  color: #3773e4;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: calc(19 / 16);
+  text-decoration: none;
+  border-radius: $radius;
+  background: rgba(55, 115, 228, 0.15);
+  &:hover,
+  &:focus {
+    color: $color_white;
+    background: #3773e4;
+  }
+  .icon {
+    margin: 0 11px 0 0;
+  }
+}
+.join--sm,
+a.join--sm {
+  padding: 4px 10px;
+  font-size: 13px;
+  font-weight: 400;
+  .icon {
+    margin: 0 6px 0 0;
+  }
+}

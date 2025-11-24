@@ -1,0 +1,84 @@
+// základní nastavení typografie
+
+// nadpisy
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+  color: $color_gray_dark;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  line-height: 1.5;
+}
+h1 {
+  font-size: 28px;
+  @media (min-width: $mqsm) {
+    font-size: 36px;
+  }
+}
+h2 {
+  font-size: 28px;
+}
+h3 {
+  font-size: 20px;
+}
+h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+// odkazy
+a {
+  color: $color_main;
+  transition: $transition;
+  &:hover,
+  &:focus {
+    color: $color_main_dark;
+  }
+}
+// odstavce
+p {
+  margin-top: 0;
+  margin-bottom: 16px;
+  line-height: 1.4;
+  line-height: 2;
+  @media (min-width: $mqsm) {
+    margin-bottom: 30px;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+// seznamy
+ul,
+ol {
+  margin: 0 0 10px 0;
+  padding: 0 0 0 20px;
+  line-height: 1.4;
+  li {
+    padding: 3px 3px 3px 0;
+  }
+  ul,
+  ol {
+    margin: 0;
+    padding: 3px 3px 0 10px;
+    li {
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+hr {
+  clear: both;
+  width: calc(100vw - #{$layout_gap} * 2 - 2 * 6px);
+  max-width: 1290px;
+  height: 0;
+  margin: 8px auto;
+  text-align: center;
+  border: 0 none;
+  border-top: 1px solid rgba($color: #c4c4c4, $alpha: 0.2);
+  @media (min-width: $mqlg) {
+    width: calc(100vw - #{$layout_gap} * 2);
+  }
+}

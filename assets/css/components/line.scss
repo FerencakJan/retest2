@@ -1,0 +1,16 @@
+.line {
+  overflow: hidden;
+  margin: 32px 0 40px;
+}
+.line__after {
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 11px);
+    width: 100vw;
+    height: 1px;
+    background: rgba($color: $color_gray, $alpha: 0.1);
+  }
+}

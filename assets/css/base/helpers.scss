@@ -1,0 +1,72 @@
+// zarovnání textu
+.center {
+  text-align: center;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+// nezalamování
+.nowrap {
+  white-space: nowrap;
+}
+// floatování
+.fleft {
+  float: left;
+}
+.fright {
+  float: right;
+}
+.cls {
+  clear: both;
+}
+// stavy
+.is-visible {
+  display: block;
+}
+.is-open {
+  display: block;
+}
+.is-hidden {
+  display: none !important;
+}
+// micro clearfix ( http://nicolasgallagher.com/micro-clearfix-hack/ )
+.cf:before,
+.cf:after {
+  content: ' ';
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.cf {
+  *zoom: 1;
+}
+// Přidává se na body při zobrazení modálních oken. Zamezí scrollování obsahu na pozadí modalu.
+.is-unscrollable {
+  overflow: hidden;
+}
+.mb-0 {
+  margin-bottom: 0;
+}
+.mx-auto {
+  margin-inline: auto;
+}
+.font-weight-600 {
+  font-weight: 600;
+}
+.flex {
+  display: flex;
+}
+.justify-center {
+  justify-content: center;
+}
+.mt-lg {
+  margin-top: 68px;
+}
+
+.js-hidden {
+  display: none !important;
+}

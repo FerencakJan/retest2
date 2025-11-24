@@ -1,0 +1,8 @@
+// základní blok obsahu
+.section {
+  padding: 70px 0;
+  &:last-child,
+  &:last-of-type {
+    padding-bottom: 0;
+  }
+}

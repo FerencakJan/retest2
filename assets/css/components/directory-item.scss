@@ -1,0 +1,227 @@
+.directory-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 180px;
+  text-decoration: none;
+  transition: $transition;
+  &:hover,
+  &:focus {
+    box-shadow: $shadow-1;
+    .estate__action {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  @media (min-width: $mqsm) {
+    flex-direction: row;
+    padding: 16px;
+  }
+  p {
+    font-size: 13px;
+    line-height: calc(24 / 13);
+  }
+  strong {
+    font-weight: 600;
+  }
+  + .directory-top__about {
+    padding-top: 40px;
+    @media (min-width: $mqlg) {
+      padding-top: 80px;
+    }
+  }
+}
+.directory-item--detail {
+  &:hover,
+  &:focus {
+    box-shadow: none;
+  }
+  @media (min-width: $mqxs) {
+    align-items: center;
+  }
+  .directory-item__logo {
+    width: 132px;
+    height: 132px;
+    border: 0;
+    @media (min-width: $mqsm) {
+      margin: 0 32px 0 0;
+    }
+    @media (min-width: $mqlg) {
+      margin: 0 56px 0 0;
+    }
+    &:before {
+      @media (min-width: $mqsm) {
+        left: 0;
+        transform: translate(0, -50%);
+      }
+    }
+    img {
+      @media (min-width: $mqsm) {
+        left: 0;
+        transform: translate(0, -50%);
+      }
+    }
+  }
+}
+.directory-item__logo {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  flex-shrink: 0;
+  justify-content: center;
+  width: 100%;
+  height: 180px;
+  margin: 0 auto 22px;
+  border-radius: 3px;
+  background: $color_white;
+
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    background: url(../img/placeholder.svg) no-repeat center;
+    transform: translate(-50%, -50%);
+  }
+  @media (min-width: $mqsm) {
+    flex-shrink: 1;
+    width: 250px;
+    max-width: calc(50% - 20px);
+    margin: 0 10px 0 0;
+  }
+  @media (min-width: $mqlg) {
+    width: 250px;
+    margin: 0 22px 0 0;
+  }
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center center;
+    transform: translate(-50%, -50%);
+  }
+}
+.directory-item__title {
+  margin-bottom: 5px;
+}
+.directory-item__price {
+  @media (min-width: $mqsm) {
+    margin-bottom: 20px;
+  }
+}
+.directory-item__location {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 11px;
+  padding-left: 30px;
+  color: $color_gray;
+  font-size: 13px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: calc(24 / 13);
+  &:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: url(../img/location.svg) no-repeat center;
+  }
+}
+.directory-item__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  &:has(+ .directory-item__content--right) {
+    flex: 1;
+    @media (min-width: 1000px) {
+      flex: 2;
+    }
+  }
+}
+.directory-item__last {
+  margin-top: auto;
+}
+.directory-item__data {
+  margin-bottom: 12px;
+  dl {
+    margin: 0;
+    font-size: 13px;
+    line-height: calc(24 / 13);
+    @media (min-width: $mqsm) {
+    }
+  }
+  dt {
+    display: -webkit-box;
+    float: left;
+    clear: left;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    width: 64px;
+    padding-right: 8px;
+    text-overflow: ellipsis;
+  }
+  dd {
+    margin-left: 64px;
+    word-break: break-word;
+  }
+  a {
+    position: relative;
+    z-index: 2;
+    text-decoration: none;
+  }
+  a[href^='tel:'] {
+    color: $color_gray;
+    &:hover,
+    &:focus {
+      color: $color_main;
+    }
+  }
+  strong {
+    font-weight: 600;
+  }
+}
+.directory-item__content--right {
+  flex: 1;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  .directory-item__data {
+    display: grid;
+    gap: 18px;
+    > div {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+    }
+  }
+  dt {
+    width: 92px;
+  }
+  dd {
+    margin-left: 92px;
+  }
+  @media (min-width: $mqsm) {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+  }
+}
+.directory-item__link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}

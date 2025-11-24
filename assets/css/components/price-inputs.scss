@@ -1,0 +1,43 @@
+.price-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -4px;
+  input {
+    height: 48px;
+    padding-left: 40px;
+    text-align: right;
+  }
+  label {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translate(0, -50%);
+    pointer-events: none;
+  }
+}
+.price-inputs--filter {
+  gap: 10px;
+  margin: 0;
+  input {
+    padding-left: 80px;
+  }
+  @media (min-width: $mqlg) {
+    flex-wrap: nowrap;
+  }
+  .price-inputs__item {
+    width: 100%;
+    padding: 0;
+    @media (min-width: $mqsm) {
+      width: calc(50% - 5px);
+    }
+    @media (min-width: $mqlg) {
+      min-width: 224px;
+    }
+  }
+}
+.price-inputs__item {
+  position: relative;
+  flex: 1 1 auto;
+  width: 50%;
+  padding: 4px;
+}

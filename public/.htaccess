@@ -1,0 +1,70 @@
+RewriteEngine on
+
+RewriteBase /
+
+RewriteRule ^sitemap\.xml$ robots.php?domain=%{SERVER_NAME} [L,QSA]
+RewriteRule ^robots\.txt$ robots.php?domain=%{SERVER_NAME} [L,QSA]
+RewriteRule (.*)closemail/(.*) close_email.php?after=$2 [L]
+
+RewriteRule ^denik-moderniho-maklere/text/13781 /denik-moderniho-maklere/ [R=301,L]
+RewriteRule ^denik-moderniho-maklere/text/13781/ /denik-moderniho-maklere/ [R=301,L]
+
+#RewriteRule ^((.*)\.(.*)) $1 [NC,L]
+
+RewriteRule ^$ index.php?action=hp  [L]
+RewriteCond %{REQUEST_URI} .*\.(ico|css|jpg|jpeg|png|js|svg|zip|gif|pdf)
+RewriteRule ^ - [L]
+
+RewriteCond %{REQUEST_FILENAME} -d [OR]
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+RewriteRule urbium-login urbium.php [L]
+RewriteRule api/property.php api/property.php [L]
+RewriteRule api/estates api/estates.php [L,QSA]
+RewriteRule api/brokers api/brokers.php [L,QSA]
+RewriteRule detail/(.*) index.php?action=detail&after=$1  [L]
+RewriteRule (.*)/detail/(.*) index.php?action=detail&before=$1&after=$2  [L]
+
+RewriteRule detail-rk/(.*) index.php?action=detail-rk&after=$1 [L]
+RewriteRule (.*)/detail-rk/(.*) index.php?action=detail-rk&before=$1&after=$2 [L]
+RewriteRule detail-broker/(.*) index.php?action=detail-broker&after=$1 [L]
+RewriteRule (.*)/detail-broker/(.*) index.php?action=detail-broker&before=$1&after=$2 [L]
+
+RewriteRule realitni-kancelar/page-(\d+) index.php?action=offices&page=$1 [QSA,L]
+RewriteRule realitni-kancelar/(.*)/page-(\d+) index.php?action=offices&after=$1&addurl=true&page=$2 [L]
+RewriteRule realitni-kancelar/(.*)/ index.php?action=offices&after=$1&addurl=true [L]
+RewriteRule realitni-kancelar index.php?action=offices [QSA,L]
+RewriteRule (.*)/realitni-kancelar/(.*) index.php?action=office&before=$1&after=$2 [L]
+
+RewriteRule oblibene index.php?action=favorites [L]
+
+RewriteRule text/(.*) index.php?action=textdetail&id=$1 [L]
+RewriteRule ^blog/page-(\d+)/ index.php?action=blog&page=$1 [QSA,L]
+RewriteRule blog/(.*)/(\d+)/ index.php?action=blogDetail&id=$2 [L]
+RewriteRule blog/ index.php?action=blog [L]
+
+RewriteRule ^inzerce index.php?action=textdetail&id=11163 [L]
+RewriteRule ^informace index.php?action=textdetail&id=11176 [L]
+RewriteRule ^cenik index.php?action=textdetail&id=11175 [L]
+RewriteRule ^komplexni-sluzby-pro-rk index.php?action=textdetail&id=11177 [L]
+RewriteRule ^realitni-software index.php?action=textdetail&id=11164 [L]
+RewriteRule ^reference-realitni-sw index.php?action=textdetail&id=10698 [L]
+RewriteRule ^www-stranky/dodane-www-stranky index.php?action=textdetail&id=11180 [L]
+RewriteRule ^www-stranky index.php?action=textdetail&id=11165 [L]
+RewriteRule ^www-stranky/www-pro-rk index.php?action=textdetail&id=10369 [L]
+RewriteRule ^www-stranky/responzivni-www-pro-rk index.php?action=textdetail&id=10370 [L]
+RewriteRule ^www-stranky/www-pro-rk-na-miru index.php?action=textdetail&id=10371 [L]
+RewriteRule ^kontakt index.php?action=textdetail&id=11179 [L]
+RewriteRule ^monitoring-soukrome-inzerce index.php?action=textdetail&id=11248 [L]
+RewriteRule ^denik-moderniho-maklere index.php?action=textdetail&id=13781 [L]
+
+RewriteRule ^aukce/vydrazene index.php?action=auctions-done [L]
+RewriteRule ^aukce index.php?action=auctions [L]
+RewriteRule ^detail-aukce/(.*) index.php?action=auction-detail&id=$1 [L]
+
+RewriteRule ^search-form index.php?action=searchform [L]
+RewriteRule ^listing index.php?action=searchform [L]
+
+RewriteRule ^(.(.*)) index.php?action=notknown&query=$1
+

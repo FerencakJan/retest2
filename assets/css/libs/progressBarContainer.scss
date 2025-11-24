@@ -1,0 +1,50 @@
+.slider-progress {
+  width: 100%;
+  background: #f5f5f5;
+  max-width: 115px;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%) rotate(-90deg);
+  transform-origin: center;
+  animation: show ease-in 300ms both 1400ms;
+  .progress {
+    width: 0%;
+    height: 3px;
+    background: $color_main;
+  }
+  &--slide {
+    color: #141313;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin-top: -2px;
+    &--current {
+      right: calc(100% + 8px);
+    }
+    &--max {
+      left: calc(100% + 8px);
+    }
+  }
+}
+@media (max-width: 1365px) {
+  .slider-progress {
+    right: -50px;
+  }
+}
+@media (max-width: 1199px) {
+}
+@media (max-width: 959px) {
+  .slider-progress {
+    max-width: 240px;
+  }
+}
+@media (max-width: 767px) {
+  .slider-progress {
+    animation: paused;
+  }
+}

@@ -1,0 +1,33 @@
+.front {
+  position: relative;
+  z-index: $index_base;
+  @media (min-width: $mqsm) {
+    height: 85vh;
+    min-height: 768px;
+  }
+  .container {
+    height: 100%;
+    padding-top: 160px;
+    padding-bottom: 100px;
+    @media (min-width: $mqsm) {
+      //padding-top: 202px;
+      padding-top: 20vh;
+      //padding-bottom: 100px;
+      padding-bottom: 10vh;
+    }
+  }
+}
+.front__map,
+.iframe-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $index_base;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}

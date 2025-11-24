@@ -1,0 +1,71 @@
+.team-member {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  strong {
+    color: $color_gray_dark;
+    font-weight: 500;
+  }
+  strong,
+  p {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  p {
+    color: #a5a5a5;
+  }
+  a {
+    color: currentColor;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: $color_main;
+    }
+  }
+  .team-member__btn__wrap {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% + 8px * 2);
+    height: calc(100% + 8px * 2);
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(1px);
+    opacity: 0;
+    transition: $transition;
+
+    inset: -8px;
+  }
+  .team-member__btn {
+    width: max-content;
+    color: #fff;
+    pointer-events: none;
+  }
+  &:hover {
+    .team-member__btn__wrap {
+      opacity: 1;
+    }
+  }
+}
+.team-member__title,
+.team-member__title.title {
+  margin-bottom: 4px;
+}
+.team-member__image {
+  overflow: hidden;
+  width: 100%;
+  height: 174px;
+  margin-bottom: 22px;
+  border-radius: 4px;
+
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

@@ -1,0 +1,16 @@
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 14px;
+  padding: 48px 0;
+  .team-member {
+    flex: 0 0 auto;
+    width: 100%;
+    @media (min-width: $mqxs) {
+      width: calc(50% - 11px);
+    }
+    @media (min-width: $mqsm) {
+      width: calc(100% / 3 - 14px / 3 * 2);
+    }
+  }
+}

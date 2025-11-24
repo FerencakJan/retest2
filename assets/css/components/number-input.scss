@@ -1,0 +1,44 @@
+.number-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 36px 0 50px;
+  button {
+    all: unset;
+    cursor: pointer;
+    color: #4f4f4f;
+    display: grid;
+    place-items: center;
+    &:hover {
+      color: $color_main;
+    }
+    svg {
+      padding: 12px;
+      transition: $transition;
+    }
+  }
+  input {
+    padding: 0;
+    text-align: center;
+    &::-webkit-inner-spin-button {
+      display: none;
+    }
+  }
+  .suffix {
+    font-size: 16px;
+    color: #4f4f4f;
+    padding-left: 8px;
+    transition: $transition;
+    border-left: 1px solid rgba(79, 79, 79, 0.4);
+  }
+}
+label:has(+ .number-input) {
+  flex: 0 0 auto;
+  padding-left: 14px;
+}
+.number-input__input {
+  display: flex;
+  align-items: baseline;
+}
+

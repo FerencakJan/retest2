@@ -1,0 +1,14 @@
+;<?php return; ?>
+[SQL]
+host = 127.0.0.1:3380
+user = f_eurobydleni_cz
+password = KT3clvEOsB
+dbname = f_eurobydleni_cz
+
+[URBIUM-SQL]
+urbium_host = 127.0.0.1
+urbium_user = eurobydleni_cz
+urbium_password = 7gp3zdS1FP
+urbium_dbname = eurobydleni_cz
+
+APP_ENV=dev

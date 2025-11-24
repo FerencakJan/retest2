@@ -1,0 +1,10 @@
+.iframe-map {
+  iframe {
+    pointer-events: none;
+  }
+  &.is-active {
+    iframe {
+      pointer-events: all;
+    }
+  }
+}

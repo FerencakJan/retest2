@@ -1,0 +1,11 @@
+node_modules/*
+node_modules
+
+assets/css/icons/*.html
+assets/css/icons/icons.scss
+
+config/config.ini.php
+.DS_Store
+
+#symlinkovaný priečinok mlift
+mlift/

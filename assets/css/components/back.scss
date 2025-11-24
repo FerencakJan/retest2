@@ -1,0 +1,55 @@
+.back,
+a.back {
+  display: block;
+  overflow: hidden;
+  margin: 30px 0;
+  padding: 40px 0;
+  color: $color_white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: $color_main;
+  @media (min-width: $mqsm) {
+    margin: 60px 0;
+    padding: 60px 0;
+    font-size: 32px;
+  }
+  p {
+    margin: 0;
+    padding: 0 16px 0 0;
+  }
+}
+.back__wrap {
+  position: relative;
+  z-index: $index_base;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media (min-width: $mqsm) {
+    padding-right: 84px;
+  }
+}
+.back__arrow {
+  position: relative;
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 273px;
+    height: 273px;
+    border: 1px solid $color_white;
+    border-radius: 100%;
+    opacity: 0.5;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+  &:after {
+    width: 387px;
+    height: 387px;
+    opacity: 0.25;
+  }
+}

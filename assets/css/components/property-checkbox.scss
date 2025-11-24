@@ -1,0 +1,61 @@
+.property-checkbox {
+  display: inline-flex;
+  align-items: center;
+  .icon {
+    flex-shrink: 0;
+    margin: -2.5px 10px -2.5px 0;
+    color: $color_main;
+  }
+  // input pole
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+
+    // zaškrtnutý
+    &:checked ~ .property-checkbox__label {
+      color: $color_main;
+      background: rgba(255, 230, 237, 0.5);
+    }
+
+    // vypnutý (disabled)
+    &:disabled ~ .property-checkbox__label {
+      color: $color_gray;
+      background: $color_gray_light;
+      cursor: default;
+    }
+  }
+}
+.property-checkbox--icon {
+  @media (min-width: $mqmd) {
+    min-width: 185px;
+  }
+}
+.property-checkbox--nowrap {
+  .property-checkbox__label {
+    white-space: nowrap;
+  }
+}
+.property-checkbox__label,
+.property-checkbox .property-checkbox__label {
+  display: inline-flex;
+  padding: 10px;
+  color: $color_gray_dark;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: calc(19 / 16);
+  text-decoration: none;
+  border-radius: $radius;
+  cursor: pointer;
+  transition: $transition;
+  @media (min-width: $mqmd) {
+    // min-width: 150px;
+  }
+  &:hover,
+  &:focus {
+    color: $color_main;
+    background: rgba(255, 230, 237, 0.5);
+    cursor: pointer;
+  }
+}

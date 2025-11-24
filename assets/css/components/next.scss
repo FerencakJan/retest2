@@ -1,0 +1,28 @@
+.next {
+  padding: 30px 0;
+  @media (min-width: $mqsm) {
+    padding: 60px 0;
+  }
+}
+.next__title {
+  margin-bottom: 24px;
+}
+.next__wrap {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 26px 10px;
+  @media (min-width: $mqmd) {
+    gap: 26px 32px;
+  }
+  .estate {
+    flex: 0 0 auto;
+    width: 100%;
+    @media (min-width: $mqxs) {
+      width: calc(50% - 5px);
+    }
+    @media (min-width: $mqmd) {
+      width: calc(50% - 16px);
+    }
+  }
+}

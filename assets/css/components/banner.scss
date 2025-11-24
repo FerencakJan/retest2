@@ -1,0 +1,13 @@
+.banner__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 788/181;
+  color: rgba($color: $color_black, $alpha: 0.2);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  border-radius: 5px;
+  background: #fbf7f4;
+}

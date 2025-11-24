@@ -1,0 +1,63 @@
+.auction__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0px 349px 98px 0px rgba(0, 0, 0, 0),
+    0px 223px 89px 0px rgba(0, 0, 0, 0.01),
+    0px 125px 75px 0px rgba(0, 0, 0, 0.05),
+    0px 56px 56px 0px rgba(0, 0, 0, 0.09), 0px 14px 31px 0px rgba(0, 0, 0, 0.1);
+  padding: 14px;
+  min-height: 74px;
+  max-width: 500px;
+  margin: -46px auto 120px;
+  translate: 0 50%;
+  input {
+    border: none;
+    padding: 0 14px;
+    height: 40px;
+  }
+  button {
+    width: 100%;
+    margin-top: 20px;
+    @media (min-width: $mqsm) {
+      flex: 1 0 112px;
+    }
+  }
+  @media (min-width: $mqsm) {
+    flex-direction: row;
+    margin-top: 0;
+    button {
+      margin: 0;
+    }
+  }
+}
+.auction__form--sign-up {
+  max-width: 640px;
+  @media (min-width: $mqsm) {
+    button {
+      flex-basis: 175px;
+    }
+  }
+}
+.auction__sign-up__divider {
+  align-self: stretch;
+  background: rgba(167, 167, 167, 0.2);
+  margin: 4px 0;
+  height: 1px;
+  @media (min-width: $mqsm) {
+    flex: 0 0 1px;
+    width: 1px;
+    margin: 0 14px;
+    height: auto;
+  }
+}
+.auction__table {
+  margin-top: -40px;
+  overflow: hidden;
+  @media (min-width: $mqsm) {
+    margin-top: -80px;
+  }
+}
+

@@ -1,0 +1,32 @@
+.description {
+  padding: 27px 0 38px 0;
+  @media (min-width: $mqsm) {
+    padding: 27px 0 75px 0;
+  }
+}
+.description__content {
+  margin-bottom: 32px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.description__properties {
+  margin-bottom: 32px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.description__title {
+  margin-bottom: 24px;
+}
+.description__form {
+  margin: 50px 0;
+  @media (min-width: $mqsm) {
+    margin: 100px 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.description__agent {
+}

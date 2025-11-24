@@ -1,0 +1,7 @@
+.modal-video {
+  background-color: rgba($color: $color_black, $alpha: 0.25);
+}
+.modal-video-close-btn:before,
+.modal-video-close-btn:after {
+  background: $color_main;
+}

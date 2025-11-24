@@ -1,0 +1,71 @@
+.title {
+  position: relative;
+  color: $color_gray_dark;
+  font-family: 'Poppins', sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  strong {
+    font-weight: 600;
+  }
+  @media (min-width: $mqsm) {
+    font-size: 28px;
+  }
+}
+.title--lg {
+  font-size: 28px;
+  @media (min-width: $mqsm) {
+    font-size: 36px;
+  }
+}
+.title--md {
+  font-size: 20px;
+}
+.title--sm {
+  font-size: 16px;
+}
+.title--xs {
+  font-size: 14px;
+}
+.title--top {
+  font-size: 24px;
+  font-weight: 600;
+  small {
+    font-size: 18px;
+    @media (min-width: $mqsm) {
+      font-size: 20px;
+    }
+  }
+  @media (min-width: $mqsm) {
+    font-size: 32px;
+  }
+}
+.title--compact {
+  font-size: 24px;
+}
+.title--next {
+  font-size: 18px;
+}
+.title--semi {
+  font-size: 28px;
+}
+.title--600 {
+  font-weight: 600;
+}
+.title--text {
+  font-size: 16px;
+}
+.title__back {
+  display: flex;
+  margin-left: -10px;
+  color: $color_main;
+  svg {
+    width: 36px;
+    max-width: none;
+  }
+  @media (min-width: 1420px) {
+    position: absolute;
+    top: 9px;
+    right: 100%;
+    margin-right: 10px;
+  }
+}

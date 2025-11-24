@@ -1,0 +1,12 @@
+.divider {
+  flex: 0 0 100%;
+  display: block;
+  width: 500px;
+  max-width: 100%;
+  height: 1px;
+  margin: 40px auto;
+  background: #dde4eb;
+  + div {
+    margin-top: 0;
+  }
+}

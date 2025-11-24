@@ -1,0 +1,36 @@
+.perex,
+p.perex {
+  position: relative;
+  font-size: 20px;
+  line-height: calc(40 / 22);
+  strong {
+    font-weight: 600;
+  }
+  @media (min-width: $mqsm) {
+    font-size: 22px;
+  }
+  @media (min-width: $mqlg) {
+    margin-bottom: 48px;
+  }
+}
+.perex--highlight,
+p.perex--highlight {
+  padding-left: 20px;
+  color: $color_main;
+  @media (min-width: $mqmd) {
+    padding-left: 0;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 4px;
+    height: calc(100% - 25px);
+    background-color: $color_main;
+    transform: translate(0, -50%);
+    @media (min-width: $mqmd) {
+      left: -40px;
+    }
+  }
+}

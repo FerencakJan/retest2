@@ -1,0 +1,42 @@
+// tabulka
+.table {
+  width: 100%;
+  margin: 30px 0;
+  border: 0;
+  min-width: 740px;
+}
+th,
+td {
+  padding: 7px 0;
+  line-height: 1.2;
+  border-top: 0;
+  border-left: 0;
+  text-align: left;
+
+  color: var(--Dark-Gray, #4f4f4f);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.8461538462;
+}
+
+// hlavička tabulky
+th {
+  color: var(--Dark-Gray, rgba(79, 79, 79, 0.6));
+}
+td {
+}
+tr {
+  &:hover td {
+    //background-color: $color_gray_light; // zvýraznění řádku po najetí myší
+  }
+  &:nth-child(odd) td {
+    //background-color: $color_gray_light; // zebra stripping
+  }
+}
+
+// obalový element (pro respo)
+.table__wrapper {
+  overflow-x: auto;
+  max-width: 100%;
+}
+

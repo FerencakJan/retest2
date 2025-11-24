@@ -1,0 +1,9 @@
+.breadcrumbs {
+  display: none;
+}
+
+.listing__agencies,
+.blog-detail,
+.typo-page {
+  margin-top: 24px;
+}

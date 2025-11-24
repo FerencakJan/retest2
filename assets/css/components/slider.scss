@@ -1,0 +1,19 @@
+.slider,
+.slider-2 {
+  overflow: hidden;
+  margin-bottom: 48px;
+  border-radius: $radius;
+
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  .slick-list {
+    margin: 0 -6px;
+  }
+  .slick-track {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .slick-slide {
+    margin: 0 6px;
+  }
+}

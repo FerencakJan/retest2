@@ -1,0 +1,13 @@
+.blog-list {
+  overflow: hidden;
+  overflow: clip;
+  padding: 30px 0;
+  @media (min-width: $mqlg) {
+    padding: 70px 0;
+  }
+}
+.blog-list__title {
+  @media (min-width: $mqlg) {
+    margin-bottom: 40px;
+  }
+}

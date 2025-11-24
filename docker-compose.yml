@@ -1,0 +1,9 @@
+version: "3"
+services:
+  app:
+    build: .docker/php
+    volumes:
+      - .:/var/www/html
+      - ./public:/var/www/html/public
+    ports:
+      - "80:80"

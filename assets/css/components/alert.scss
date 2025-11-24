@@ -1,0 +1,31 @@
+// chybové hlášky
+.alert {
+  position: fixed;
+  bottom: 60px;
+  left: 50%;
+  z-index: $index_alert;
+  width: 346px;
+  max-width: calc(100vw - 20px);
+  padding: 24px;
+  color: $color_white;
+  font-size: 14px;
+  line-height: calc(21 / 14);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.24), 0 0 8px rgba(0, 0, 0, 0.2);
+  transform: translate(-50%, 0);
+  p {
+    margin: 0;
+  }
+}
+// potvrzující hláška
+.alert--success {
+  padding-left: 80px;
+  //background: url(../img/alert-success.svg) no-repeat rgba(13, 199, 85, 0.62) 28px 28px;
+  background: url(../img/alert-success.svg) no-repeat rgba(63, 184, 110, 0.9) 28px 28px;
+}
+// výstražná hláška
+.alert--danger {
+  padding-left: 80px;
+  background: url(../img/alert-danger.svg) no-repeat rgba(0, 0, 0, 0.8) 28px 28px;
+}

@@ -1,0 +1,12 @@
+@media (max-width: 959px) {
+  .js-notch {
+    .container {
+      padding: 0 env(safe-area-inset-right, $layout_gap + 5px) 0 env(safe-area-inset-left, $layout_gap + 5px);
+    }
+  }
+  .js-not-notch {
+    .container {
+      padding: 0 $layout_gap + 5px;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.location-filter {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 16px 0 32px;
+  border-radius: $radius;
+  @media (min-width: $mqxs) {
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    min-height: 48px;
+  }
+  @media (min-width: $mqsm) {
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+  p {
+    font-size: 14px;
+  }
+  strong {
+    font-weight: 600;
+  }
+}
+.location-filter__content {
+  flex: 1 1 auto;
+}
+.location-filter__select {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-right: -10px;
+  label {
+    color: rgba($color: #000, $alpha: 0.5);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: calc(20 / 13);
+    @media (max-width: calc($mqxs - 1px)) {
+      min-width: 45px;
+    }
+  }
+  .custom-select {
+    @media (min-width: $mqxs) {
+      width: auto;
+    }
+  }
+}

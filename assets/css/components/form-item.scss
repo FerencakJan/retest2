@@ -1,0 +1,42 @@
+.form-item {
+  position: relative;
+  input,
+  textarea {
+    min-height: 56px;
+    padding-left: 102px;
+  }
+  textarea {
+    padding-top: 19px;
+  }
+  label {
+    position: absolute;
+    top: 19px;
+    left: 24px;
+    color: rgba($color: #000, $alpha: 0.5);
+    font-size: 16px;
+    line-height: calc(19 / 16);
+  }
+  .select-selected {
+    display: inline-flex;
+    align-items: center;
+    min-height: 56px;
+  }
+}
+.form-item--simple {
+  input,
+  textarea {
+    padding-left: 16px;
+  }
+}
+.form-item--double {
+  display: flex;
+  gap: 10px;
+  input {
+    &:first-child {
+      width: 60%;
+    }
+    &:last-child {
+      width: 40%;
+    }
+  }
+}

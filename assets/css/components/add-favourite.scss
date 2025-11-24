@@ -1,0 +1,36 @@
+.add-favourite {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  p {
+    color: $color_gray;
+    font-size: 12px;
+  }
+  &:hover,
+  &:focus,
+  &.is-active {
+    .add-favourite__icon {
+      .icon--icon-favourite-fill {
+        opacity: 1;
+      }
+    }
+  }
+}
+.add-favourite__icon {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    transition: $transition;
+    transform: translate(-50%, -50%);
+  }
+  .icon--icon-favourite-fill {
+    color: $color_main;
+    opacity: 0;
+  }
+}

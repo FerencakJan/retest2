@@ -1,0 +1,15 @@
+.info,
+a.info {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  color: $color_main;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: $color_main_dark;
+  }
+  .icon {
+    margin: 0 6px 0 0;
+  }
+}

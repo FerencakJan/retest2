@@ -1,0 +1,102 @@
+.diary {
+  overflow: hidden;
+  padding: 50px 0;
+  @media (min-width: $mqsm) {
+    padding: 70px 0;
+  }
+  .container {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: rgba(235, 237, 239, 0.4);
+    @media (min-width: $mqsm) {
+      padding-top: 90px;
+      padding-bottom: 70px;
+    }
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 100px;
+      height: 100%;
+      background-color: rgba(235, 237, 239, 0.4);
+    }
+    &:before {
+      left: 100%;
+      border-top-right-radius: $radius;
+      border-bottom-right-radius: $radius;
+    }
+    &:after {
+      right: 100%;
+      border-top-left-radius: $radius;
+      border-bottom-left-radius: $radius;
+    }
+  }
+}
+.diary__top {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: -10px -10px 30px -10px;
+  @media (min-width: $mqsm) {
+    margin-bottom: 50px;
+  }
+  h2 {
+    margin-bottom: 8px;
+  }
+}
+.diary__top-item {
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: 470px;
+  padding: 10px;
+  @media (min-width: $mqsm) {
+    width: 50%;
+  }
+}
+.diary__grid {
+  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+  flex-wrap: wrap;
+  gap: 48px var(--_grid-gap-x);
+  margin-bottom: 48px;
+
+  --_grid-gap-x: 32px;
+  // .diary-item {
+  //   flex: 0 0 auto;
+  //   width: 100%;
+  //   @media (min-width: $mqxs) {
+  //     width: calc(50% - var(--_grid-gap-x) / 2);
+  //   }
+  //   @media (min-width: $mqmd) {
+  //     width: calc(100% / 3 - var(--_grid-gap-x) / 2 * 2);
+  //   }
+  // }
+}
+.diary__grid--four {
+  .diary-item {
+    @media (min-width: $mqlg) {
+      // width: calc(100% / 4 - var(--_grid-gap-x) / 2 * 3);
+    }
+  }
+}
+.diary__grid--vertical {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 12px;
+  margin-bottom: 30px;
+  @media (min-width: $mqsm) {
+    margin-bottom: 60px;
+  }
+  @media (min-width: $mqlg) {
+    margin-bottom: 90px;
+  }
+  .diary-item {
+    @media (min-width: $mqsm) {
+      width: 100%;
+    }
+  }
+}

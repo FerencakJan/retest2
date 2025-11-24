@@ -1,0 +1,99 @@
+// formulář - radio button
+.form-radio {
+  position: relative;
+  padding: 5px 0;
+  line-height: calc(29 / 16);
+  user-select: none;
+
+  // input pole
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+
+    // zaškrtnutý
+    &:checked ~ .form-radio__box {
+      border-color: $color_main;
+      background: $color_main url('#{$imgPath}/check.svg') center center no-repeat;
+      background-size: 14px;
+    }
+
+    // vypnutý (disabled)
+    &:disabled ~ .form-radio__box {
+      border: 1px solid $color_gray_light;
+      background: $color_gray;
+      cursor: default;
+    }
+  }
+  a {
+    color: $color_black;
+  }
+
+  // úprava labelu
+  .form-label {
+    position: relative;
+    z-index: $index_page + 1;
+    margin: 0;
+    padding-left: 32px;
+    color: $color_gray_dark;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-weight: 500;
+    line-height: calc(29 / 16);
+    cursor: pointer;
+  }
+}
+.form-radio--tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 10px;
+  &:last-child {
+    padding-right: 0;
+  }
+  .form-label {
+    height: 35px;
+    padding: 2px 14px;
+    color: $color_gray;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    border: 1px solid rgba(79, 79, 79, 0.2);
+    border-radius: $radius;
+    transition: $transition;
+  }
+  input {
+    &:checked ~ .form-label {
+      color: $color_main;
+      //font-weight: 500;
+      text-shadow: 0 0 0.5px $color_main;
+      border-color: $color_main;
+      background: rgba(253, 6, 74, 0.12);
+    }
+  }
+}
+// element v řádku
+.form-radio--inline {
+  display: inline-block;
+  padding-right: 15px;
+}
+
+// slepý checkbox
+.form-radio__box {
+  position: absolute;
+  top: 9px;
+  z-index: $index_page + 2;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  background-color: $color_white;
+  pointer-events: none;
+}
+.form-radio__wrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: -5px 0;
+}
